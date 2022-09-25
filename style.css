@@ -1,0 +1,177 @@
+*, *:after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+
+@font-face {
+    font-family: 'gost'; 
+    src: url(src/fonts/gost.ttf); 
+}
+body{
+    padding-top: 20px;
+    font-family: gost;
+    background-color: #fffafa;
+}
+
+.header-top{
+    display: grid;
+    padding-left: 120px;
+    padding-right: 100px;
+    grid-template-columns: 2fr 1fr 6fr;
+    grid-template-areas: ". callback icons"". . line" "logo . nav";
+
+}
+.header-icons{
+    grid-area: icons;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    align-items: end;
+    float: right;
+}
+
+.header-callback{
+    grid-area: callback;
+    padding-right: 40px;
+    align-self: flex-end;
+}
+.callback{
+    color: red;
+    padding-right: 30px;
+    font-size: 1.2vw;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-nav{
+    width: 100%;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 1.5vw;
+    grid-gap: 20px;
+    align-items: flex-end;
+    text-align: auto;
+}
+
+.header-logo{
+    grid-area: logo;
+}
+.line{
+    margin-top: 17px;
+    grid-area: line;
+}
+.container-slider{
+    margin-top: 20px;
+}
+
+.nav-bar{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    grid-template-areas: "better . new stonks advice";
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+    padding-right: 100px;
+    font-size: 1.5vw;
+    text-align: right;
+}
+.better-offer{
+    grid-area: better;
+    color: black;
+    font-size:1.8vw;
+    font-weight: 600;
+    text-align: left;
+}
+.new{
+    grid-area: new;
+    color:orange
+}
+.stonks{
+    grid-area: stonks;
+    color: red;
+}
+.advice{
+    grid-area: advice;
+    color: skyblue;
+}
+
+
+.offers{
+    padding-left: 120px;
+    padding-right: 100px;
+    display: grid;
+    grid-column-gap: 10% ;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "hit new-1" 
+    "hit new-2";
+    text-align: center;
+    
+}
+
+.offer-hit{
+    grid-area: hit;
+
+}
+.offer-new-1{
+    grid-area: new-1;
+}
+.offer-new-2{
+    grid-area: new-2;
+}
+
+.offer-hit > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+.offer-new-1 > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.offer-new-2 > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.offer-text {
+    color: black;
+    font-size: 1.2vw;
+}
+.offer-text a {
+    color: black;
+    font-weight: 700;
+}
+
+footer{
+    padding: 30px 100px 30px 120px;
+    background-color: #edebeb;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "info . redcat";
+}
+.footer-info{
+    grid-area: info;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.redcat-copyryght{
+    grid-area: redcat;
+    white-space: nowrap;
+}
+.info-container{
+    margin-right: 2vw;
+    text-align: center;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 12%;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
