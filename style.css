@@ -17,25 +17,32 @@ body{
 
 .header-top{
     display: grid;
-    padding-left: 120px;
-    padding-right: 100px;
-    grid-template-columns: 2fr 1fr 6fr;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    grid-template-columns: auto 1fr 6fr;
     grid-template-areas: ". callback icons"". . line" "logo . nav";
 
 }
 .header-icons{
     grid-area: icons;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-    align-items: end;
-    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+.rounded{
+    max-width: 300px;
+    max-height: 37px;
+    background-color: #d4e1ef;
+    border: 0px;
+    align-self: center;
+}
+.border-0{
+    background-color: #d4e1ef;
+    min-width: 37px;
 }
 
 .header-callback{
     grid-area: callback;
     padding-right: 40px;
-    align-self: flex-end;
 }
 .callback{
     color: red;
@@ -43,22 +50,29 @@ body{
     font-size: 1.2vw;
     text-decoration: none;
     font-weight: 500;
+    align-self: center;
 }
 
 .header-nav{
-    width: 100%;
     grid-area: nav;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     font-size: 1.5vw;
-    grid-gap: 20px;
-    align-items: flex-end;
-    text-align: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
 }
 
 .header-logo{
     grid-area: logo;
+    display: flex;
 }
+
+.red{
+    color:red; 
+}
+h1{
+    font-size:4vw;
+}
+
 .line{
     margin-top: 17px;
     grid-area: line;
@@ -73,8 +87,8 @@ body{
     grid-template-areas: "better . new stonks advice";
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 120px;
-    padding-right: 100px;
+    padding-left: 6vw;
+    padding-right: 6vw;
     font-size: 1.5vw;
     text-align: right;
 }
@@ -100,8 +114,8 @@ body{
 
 
 .offers{
-    padding-left: 120px;
-    padding-right: 100px;
+    padding-left: 6vw;
+    padding-right: 6vw;
     display: grid;
     grid-column-gap: 10% ;
     grid-template-columns: 3fr 1fr;
